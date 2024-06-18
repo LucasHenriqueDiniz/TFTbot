@@ -1,0 +1,45 @@
+print("Starting a game")
+    #Press Play
+    if (PlayButton != None):
+        print('Play Clicked')
+        pg.moveTo(PlayButton)
+        pg.click()
+        pg.sleep(0.2)
+
+    #Find TFT gamemode
+    if (SelectTFT != None):
+        print('TFT selected')
+        pg.moveTo(SelectTFT)
+        pg.click()
+        pg.sleep(0.2)
+
+    #Confirm gamemode
+    if (Confirm != None):
+        print('Confirm gamemode')
+        pg.moveTo(Confirm)
+        pg.click()
+        pg.sleep(0.2)
+    
+    pg.sleep(.5)
+    
+    #FInd match
+    if (FindMatch != None):
+        print('Started searching for a match.')
+        pg.moveTo(FindMatch)
+        pg.click()
+        pg.sleep(0.2)
+
+
+    #Searching for a match......
+    if (inQuene != None):
+        while(inQuene != None) or (MatchFound != None):
+            print("still searching for a match.....")
+            pg.sleep(.3)
+
+    #MatchFound
+    if (MatchFound != None):
+        print('Match Found!')
+        pg.moveTo(MatchFound)
+        pg.click()
+        ingame = True
+        pg.sleep(5)
